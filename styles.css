@@ -1,7 +1,24 @@
+:root {
+    --color-900: hsl(0, 0%, 8%);
+    --color-700: hsl(0, 0%, 12%);
+    --color-500: hsl(0, 0%, 20%);
+    --color-300: hsl(75, 94%, 57%);
+    --color-100: hsl(0, 0%, 100%);
+
+    --f-size-100: 0.875rem;
+
+    --f-weight-bold: 700;
+    --f-weight-semibold: 600;
+    --f-weight-normal: 400;
+
+    --f-family: "Inter", sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     list-style: none;
+    text-decoration: none;
 }
 
 html {
@@ -12,17 +29,67 @@ html {
     box-sizing: inherit;
 }
 
+img {
+    display: block;
+    width: 90px;
+    border-radius: 100%;
+    margin-bottom: 25px;
+}
+
 body {
     display: grid;
     align-content: center;
     justify-content: center;
     height: 100vh;
+    font-family: var(--f-family);
+    font-weight: var(--f-weight-semibold);
+    font-size: var(--f-size-100);
+    color: var(--color-100);
+    background-color: var(--color-900);
+}
+
+header p:first-of-type {
+    color: var(--color-300);
+    font-size: 0.875rem;
+}
+
+header p:nth-of-type(2) {
+    font-weight: var(--f-weight-normal);
+    font-size: 0.875rem;
+    margin-block: 28px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: var(--f-weight-semibold);
+    margin-bottom: 10px;
 }
 
 .wrapper {
-    padding: 20px;
-    margin-inline: 20px;
+    padding: 25px;
     border-radius: 12px;
+    background-color: var(--color-700);
+}
 
-    background-color: tomato;
+.grid {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+}
+
+ul.grid {
+    gap: 15px;
+}
+
+li, a {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+}
+
+a {
+    padding: 14px 85px;
+    background-color: var(--color-500);
+    font-weight: var(--f-weight-semibold);
+    color: inherit;
 }
